@@ -1,0 +1,6 @@
+EmployeeID,SkillName,CurrentProficiency,RequiredProficiency,AssessmentDate
+EMP001,Project Management,3,5,2024-01-15
+EMP001,Python Programming,2,4,2024-01-20
+EMP002,Data Analysis,4,4,2024-02-01
+EMP002,Strategic Thinking,3,5,2024-02-05
+EMP004,Communication,4,5,2023-12-10

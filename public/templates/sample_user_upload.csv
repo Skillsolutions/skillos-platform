@@ -1,0 +1,4 @@
+EmployeeID,FullName,Email,Role,Department,ManagerEmail
+EMP001,John Doe,john.doe@example.com,Learner,Engineering,manager.eng@example.com
+EMP002,Jane Smith,jane.smith@example.com,Team Leader,Marketing,manager.mkt@example.com
+EMP003,Alice Brown,alice.brown@example.com,Admin,HR,ceo@example.com

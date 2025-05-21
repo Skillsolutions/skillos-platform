@@ -1,0 +1,79 @@
+{
+  "employeeId": "emp123",
+  "name": "Alex Johnson",
+  "email": "alex.johnson@example.com",
+  "role": "Senior Software Engineer",
+  "team": "Alpha Development Team",
+  "manager": "Jane Doe",
+  "profileImage": "/images/mock/alex_johnson.png",
+  "bio": "Alex is a highly skilled Senior Software Engineer with 8 years of experience in full-stack development, specializing in cloud-native applications and microservices architecture. Passionate about mentoring junior developers and driving innovation within the team.",
+  "skills": [
+    { "skill": "JavaScript", "level": 90 },
+    { "skill": "React", "level": 85 },
+    { "skill": "Node.js", "level": 80 },
+    { "skill": "Python", "level": 75 },
+    { "skill": "AWS", "level": 95 },
+    { "skill": "Docker", "level": 70 },
+    { "skill": "Kubernetes", "level": 65 }
+  ],
+  "competencies": {
+    "technical": [
+      { "name": "Software Design & Architecture", "level": "Expert", "description": "Designs complex systems, anticipates future needs." },
+      { "name": "Cloud Computing (AWS)", "level": "Advanced", "description": "Proficient in deploying and managing AWS services." },
+      { "name": "DevOps Practices", "level": "Proficient", "description": "Understands CI/CD pipelines and infrastructure as code." }
+    ],
+    "behavioural": [
+      { "name": "Problem Solving", "level": "Expert", "description": "Consistently identifies and resolves complex issues effectively." },
+      { "name": "Communication", "level": "Advanced", "description": "Clearly articulates technical concepts to diverse audiences." },
+      { "name": "Teamwork & Collaboration", "level": "Advanced", "description": "Works effectively with team members to achieve common goals." },
+      { "name": "Leadership", "level": "Proficient", "description": "Guides and mentors junior team members." }
+    ]
+  },
+  "assessments": [
+    {
+      "name": "Advanced JavaScript Proficiency Test",
+      "datePre": "2024-01-15",
+      "scorePre": 75,
+      "datePost": "2024-04-15",
+      "scorePost": 92,
+      "learningIntervention": "Completed 'Mastering Modern JavaScript' course & project work"
+    },
+    {
+      "name": "AWS Solutions Architect Associate - Practice Exam",
+      "datePre": "2023-11-10",
+      "scorePre": 68,
+      "datePost": "2024-02-20",
+      "scorePost": 88,
+      "learningIntervention": "Attended AWS workshop, hands-on labs, and self-study"
+    }
+  ],
+  "currentEnrollments": [
+    { "courseName": "Certified Kubernetes Administrator (CKA) Prep Course", "provider": "Linux Foundation", "progress": 60, "dueDate": "2025-07-30" },
+    { "courseName": "Microservices Security Patterns", "provider": "Coursera", "progress": 25, "dueDate": "2025-09-15" }
+  ],
+  "performanceMetrics": {
+    "overallRating": 4.8,
+    "goalsAchieved": "95%",
+    "peerFeedbackSummary": "Highly valued for technical expertise and willingness to help others.",
+    "managerFeedbackSummary": "Exceeds expectations in most areas, key contributor to project success."
+  },
+  "learningProgress": {
+    "coursesCompletedThisYear": 5,
+    "hoursLearnedThisYear": 120,
+    "skillsDeveloped": ["Advanced Kubernetes", "GraphQL", "Terraform"]
+  },
+  "strengths": [
+    "Exceptional problem-solving abilities in complex technical scenarios.",
+    "Strong leadership and mentoring skills, positively impacting team growth.",
+    "Deep expertise in AWS cloud services and architecture."
+  ],
+  "recommendedCourses": [
+    { "id": "course789", "name": "Advanced Design Patterns in Python", "provider": "Udemy", "reason": "To further enhance Python backend development skills." },
+    { "id": "course101", "name": "Leading High-Performing Teams", "provider": "LinkedIn Learning", "reason": "To develop leadership competencies further." },
+    { "id": "course112", "name": "Enterprise Kubernetes Networking", "provider": "A Cloud Guru", "reason": "To deepen Kubernetes expertise for upcoming projects." }
+  ],
+  "learningPaths": [
+    { "id": "lp001", "name": "Cloud Architect Mastery Path", "description": "A curated set of courses and experiences to achieve expert-level cloud architecture skills.", "progress": 40 }
+  ]
+}
+
