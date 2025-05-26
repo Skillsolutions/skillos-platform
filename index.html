@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillOS Platform - Engagement Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .sidebar {
+            width: 280px;
+            background-color: #1e40af;
+            color: white;
+            height: 100vh;
+            position: fixed;
+        }
+        .content {
+            margin-left: 280px;
+        }
+        .nav-item {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            margin: 0.25rem 0;
+            transition: all 0.2s;
+        }
+        .nav-item:hover, .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .card {
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background-color: white;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        .badge-green {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+        .badge-yellow {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        .badge-red {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .badge-purple {
+            background-color: #ede9fe;
+            color: #5b21b6;
+        }
+        .tab {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 2px solid #1e40af;
+            color: #1e40af;
+            font-weight: 600;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background-color: #1e40af;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1e3a8a;
+        }
+        .btn-outline {
+            border: 1px solid #d1d5db;
+        }
+        .btn-outline:hover {
+            background-color: #f3f4f6;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+        .modal-content {
+            background-color: white;
+            border-radius: 0.5rem;
+            width: 100%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e5e7eb;
+            z-index: -1;
+        }
+        .step {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #6b7280;
+            position: relative;
+            z-index: 10;
+        }
+        .step.active {
+            background-color: #1e40af;
+            color: white;
+        }
+        .step.completed {
+            background-color: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold">SkillOS</h1>
+            </div>
+            <div class="px-4">
+                <div class="nav-item">
+                    <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-book mr-3"></i> Course Catalogue
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-clipboard-check mr-3"></i> Assessments
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-chart-line mr-3"></i> Analytics
+                </div>
+                <div class="nav-item active">
+                    <i class="fas fa-bullhorn mr-3"></i> Engagement Planner
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-dollar-sign mr-3"></i> ROI of Learning
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-cog mr-3"></i> Settings
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold">Engagement Planner</h1>
+                <div>
+                    <button class="btn btn-primary" onclick="openCampaignModal()">
+                        <i class="fas fa-plus mr-2"></i> Create Campaign
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex border-b mb-6">
+                <div class="tab active" onclick="switchTab('campaigns')">Campaigns</div>
+                <div class="tab" onclick="switchTab('smart-nudges')">Smart Nudges</div>
+                <div class="tab" onclick="switchTab('quick-actions')">Quick Actions</div>
+                <div class="tab" onclick="switchTab('recognition')">Recognition Tools</div>
+                <div class="tab" onclick="switchTab('challenges')">Challenges</div>
+                <div class="tab" onclick="switchTab('templates')">Templates</div>
+                <div class="tab" onclick="switchTab('settings')">Settings</div>
+            </div>
+
+            <!-- Campaigns Tab Content -->
+            <div id="campaigns-tab" class="tab-content">
+                <!-- Filters -->
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex space-x-4">
+                        <select class="border rounded-md px-3 py-2">
+                            <option>All Campaigns</option>
+                            <option>Active</option>
+                            <option>Scheduled</option>
+                            <option>Draft</option>
+                            <option>Completed</option>
+                        </select>
+                        <input type="text" placeholder="Search campaigns..." class="border rounded-md px-3 py-2 w-64">
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter mr-2"></i> Filter
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-sort mr-2"></i> Sort
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campaign Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- New Year Campaign -->
+                    <div class="card p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge badge-green">Active</span>
+                            <div class="text-gray-400">
+                                <i class="fas fa-ellipsis-v cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">New Year Learning Resolutions</h3>
+                        <p class="text-gray-600 mb-4">Encourage employees to set learning goals for the new year and track their progress.</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <div class="mr-4">
+                                <i class="far fa-calendar mr-1"></i> Jan 1 - Jan 31
+                            </div>
+                            <div>
+                                <i class="far fa-user mr-1"></i> Company-wide
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Progress</span>
+                                <span>68%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 68%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button class="btn btn-outline text-sm">View Details</button>
+                            <button class="btn btn-outline text-sm">Send Reminder</button>
+                        </div>
+                    </div>
+
+                    <!-- Women's Day Campaign -->
+                    <div class="card p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge badge-blue">Scheduled</span>
+                            <div class="text-gray-400">
+                                <i class="fas fa-ellipsis-v cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Women's Day Leadership Skills</h3>
+                        <p class="text-gray-600 mb-4">Special learning path focused on women's leadership development and mentorship.</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <div class="mr-4">
+                                <i class="far fa-calendar mr-1"></i> Mar 1 - Mar 15
+                            </div>
+                            <div>
+                                <i class="far fa-user mr-1"></i> Selected Teams
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Progress</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button class="btn btn-outline text-sm">View Details</button>
+                            <button class="btn btn-outline text-sm">Edit Campaign</button>
+                        </div>
+                    </div>
+
+                    <!-- Ramadan Campaign -->
+                    <div class="card p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge badge-yellow">Draft</span>
+                            <div class="text-gray-400">
+                                <i class="fas fa-ellipsis-v cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Ramadan Reflection & Growth</h3>
+                        <p class="text-gray-600 mb-4">Mindfulness and personal development courses during the month of Ramadan.</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <div class="mr-4">
+                                <i class="far fa-calendar mr-1"></i> Not scheduled
+                            </div>
+                            <div>
+                                <i class="far fa-user mr-1"></i> Not assigned
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Completion</span>
+                                <span>Draft</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button class="btn btn-outline text-sm">Continue Editing</button>
+                            <button class="btn btn-primary text-sm">Publish</button>
+                        </div>
+                    </div>
+
+                    <!-- Q3 Learning Campaign -->
+                    <div class="card p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge badge-purple">Planned</span>
+                            <div class="text-gray-400">
+                                <i class="fas fa-ellipsis-v cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Q3 Learning Sprint</h3>
+                        <p class="text-gray-600 mb-4">Intensive learning period with focused skill development and certification goals.</p>
+                        <div class="flex items-center text-sm text-gray-500 mb-4">
+                            <div class="mr-4">
+                                <i class="far fa-calendar mr-1"></i> Jul 1 - Sep 30
+                            </div>
+                            <div>
+                                <i class="far fa-user mr-1"></i> All Departments
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span>Preparation</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <button class="btn btn-outline text-sm">View Details</button>
+                            <button class="btn btn-outline text-sm">Edit Campaign</button>
+                        </div>
+                    </div>
+
+                    <!-- Technical Skills Campaign -->
+                    <div class="card p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="badge badge-red">Completed</span>
+                            <div class="text-gray-400">
+             
+(Content truncated due to size limit. Use line ranges to read in chunks)
