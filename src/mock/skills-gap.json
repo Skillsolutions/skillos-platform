@@ -1,0 +1,73 @@
+{
+  "skillsGap": {
+    "currentSkills": [
+      { "name": "JavaScript", "level": 80 },
+      { "name": "HTML", "level": 90 },
+      { "name": "CSS", "level": 85 },
+      { "name": "React", "level": 70 },
+      { "name": "Node.js", "level": 60 }
+    ],
+    "requiredSkills": [
+      { "name": "JavaScript", "level": 90 },
+      { "name": "HTML", "level": 80 },
+      { "name": "CSS", "level": 80 },
+      { "name": "React", "level": 85 },
+      { "name": "Node.js", "level": 80 },
+      { "name": "TypeScript", "level": 75 },
+      { "name": "GraphQL", "level": 70 }
+    ],
+    "gapAnalysis": [
+      { "name": "JavaScript", "gap": 10, "status": "Improvement Needed" },
+      { "name": "HTML", "gap": -10, "status": "Exceeds Requirements" },
+      { "name": "CSS", "gap": -5, "status": "Exceeds Requirements" },
+      { "name": "React", "gap": 15, "status": "Significant Gap" },
+      { "name": "Node.js", "gap": 20, "status": "Significant Gap" },
+      { "name": "TypeScript", "gap": 75, "status": "Missing Skill" },
+      { "name": "GraphQL", "gap": 70, "status": "Missing Skill" }
+    ],
+    "recommendedCourses": [
+      {
+        "course_id": "7",
+        "title": "Understanding TypeScript - 2023 Edition",
+        "description": "Boost your JavaScript projects with TypeScript: Learn all about core types, generics, TypeScript + React or Node & more!",
+        "instructor": "Maximilian Schwarzmüller",
+        "image_url": "https://img-c.udemycdn.com/course/240x135/947098_2307_2.jpg",
+        "rating": 4.7,
+        "duration": 15,
+        "level": "Intermediate",
+        "url": "https://www.udemy.com/course/understanding-typescript/",
+        "relevance_score": 0.95,
+        "skills_addressed": ["TypeScript", "JavaScript", "Web Development"],
+        "completion_time": 4
+      },
+      {
+        "course_id": "8",
+        "title": "GraphQL with React: The Complete Developers Guide",
+        "description": "Learn and master GraphQL by building real web apps with React and Node",
+        "instructor": "Stephen Grider",
+        "image_url": "https://img-c.udemycdn.com/course/240x135/1109926_7f97_4.jpg",
+        "rating": 4.6,
+        "duration": 12,
+        "level": "Intermediate",
+        "url": "https://www.udemy.com/course/graphql-with-react-course/",
+        "relevance_score": 0.9,
+        "skills_addressed": ["GraphQL", "React", "Node.js", "API Development"],
+        "completion_time": 3
+      },
+      {
+        "course_id": "9",
+        "title": "Advanced React and Redux",
+        "description": "Grow your React skills with advanced concepts - Authentication, Testing, Middlewares, HOC's, and Deployment",
+        "instructor": "Stephen Grider",
+        "image_url": "https://img-c.udemycdn.com/course/240x135/781532_8b4d_6.jpg",
+        "rating": 4.6,
+        "duration": 21,
+        "level": "Advanced",
+        "url": "https://www.udemy.com/course/react-redux-tutorial/",
+        "relevance_score": 0.85,
+        "skills_addressed": ["React", "Redux", "JavaScript", "Web Development"],
+        "completion_time": 5
+      }
+    ]
+  }
+}

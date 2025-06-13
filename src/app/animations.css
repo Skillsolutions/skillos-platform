@@ -1,0 +1,110 @@
+/* Add animation styles to global CSS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-in-up {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.animate-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.animate-scale {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Hover animation classes */
+.hover-animate {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.2);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-in-up,
+  .animate-in-left,
+  .animate-scale,
+  .hover-animate,
+  .hover-lift:hover,
+  .hover-scale:hover {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}

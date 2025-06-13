@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 217 91.2% 59.8%;
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Dark theme overrides */
+.dark-theme {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 217 91.2% 59.8%;
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+}
+
+/* Platform specific styles */
+.platform-layout {
+  min-height: 100vh;
+  background-color: hsl(240, 10%, 3.9%);
+}
+
+.platform-sidebar {
+  background-color: hsl(240, 10%, 5.9%);
+  border-right: 1px solid hsl(240, 3.7%, 15.9%);
+}
+
+.platform-header {
+  background-color: hsl(240, 10%, 5.9%);
+  border-bottom: 1px solid hsl(240, 3.7%, 15.9%);
+}
+
+.platform-content {
+  background-color: hsl(240, 10%, 3.9%);
+}
+
+/* Card styles with proper contrast */
+.card {
+  background-color: hsl(240, 10%, 5.9%);
+  border: 1px solid hsl(240, 3.7%, 15.9%);
+}
+
+.card-header {
+  background-color: hsl(240, 10%, 7.9%);
+}
+
+/* Stats card styles */
+.stats-card {
+  background-color: hsl(240, 10%, 7.9%);
+  border: 1px solid hsl(240, 3.7%, 15.9%);
+}
+
+.stats-card-blue {
+  background-color: hsl(217, 91.2%, 15.9%);
+  border: 1px solid hsl(217, 91.2%, 25.9%);
+}
+
+.stats-card-green {
+  background-color: hsl(142, 71.4%, 15.9%);
+  border: 1px solid hsl(142, 71.4%, 25.9%);
+}
+
+.stats-card-amber {
+  background-color: hsl(38, 92.1%, 15.9%);
+  border: 1px solid hsl(38, 92.1%, 25.9%);
+}
+
+.stats-card-purple {
+  background-color: hsl(280, 87.3%, 15.9%);
+  border: 1px solid hsl(280, 87.3%, 25.9%);
+}
+
+/* Table styles */
+.table {
+  background-color: hsl(240, 10%, 5.9%);
+}
+
+.table-header {
+  background-color: hsl(240, 10%, 7.9%);
+}
+
+.table-row:hover {
+  background-color: hsl(240, 10%, 9.9%);
+}
+
+/* Ensure text contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(0, 0%, 98%);
+}
+
+p, span, div {
+  color: hsl(0, 0%, 90%);
+}
+
+.text-muted-foreground {
+  color: hsl(240, 5%, 64.9%);
+}
+
+/* Badge styles */
+.badge {
+  background-color: hsl(240, 3.7%, 15.9%);
+  color: hsl(0, 0%, 90%);
+}
+
+/* Button styles */
+.button-primary {
+  background-color: hsl(217, 91.2%, 59.8%);
+  color: hsl(0, 0%, 98%);
+}
+
+.button-secondary {
+  background-color: hsl(240, 3.7%, 15.9%);
+  color: hsl(0, 0%, 98%);
+}
+
+/* Input styles */
+.input {
+  background-color: hsl(240, 3.7%, 15.9%);
+  border: 1px solid hsl(240, 3.7%, 25.9%);
+  color: hsl(0, 0%, 98%);
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

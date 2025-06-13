@@ -1,0 +1,348 @@
+/**
+ * SkillOS Design System - Color Tokens
+ * 
+ * This file defines the core color palette and design tokens for the SkillOS platform.
+ * All UI components should reference these tokens for consistent styling.
+ */
+
+:root {
+  /* Base colors */
+  --color-primary: 221 83% 53%;      /* #3B82F6 - Blue */
+  --color-primary-light: 217 91% 60%; /* #60A5FA - Light Blue */
+  --color-primary-dark: 224 76% 48%;  /* #2563EB - Dark Blue */
+  
+  --color-secondary: 262 83% 58%;    /* #8B5CF6 - Purple */
+  --color-secondary-light: 263 70% 71%; /* #A78BFA - Light Purple */
+  --color-secondary-dark: 261 73% 52%;  /* #7C3AED - Dark Purple */
+  
+  --color-accent: 142 71% 45%;       /* #10B981 - Green */
+  --color-accent-light: 142 72% 59%;  /* #34D399 - Light Green */
+  --color-accent-dark: 142 72% 35%;   /* #059669 - Dark Green */
+  
+  /* Feedback colors */
+  --color-success: 142 71% 45%;      /* #10B981 - Green */
+  --color-warning: 38 92% 50%;       /* #F59E0B - Amber */
+  --color-error: 0 84% 60%;          /* #EF4444 - Red */
+  --color-info: 217 91% 60%;         /* #60A5FA - Blue */
+  
+  /* Neutral colors - Dark theme */
+  --color-background: 240 10% 3.9%;  /* #0F0F11 - Near Black */
+  --color-foreground: 0 0% 98%;      /* #FAFAFA - Off White */
+  
+  --color-card: 240 10% 5.9%;        /* #141417 - Dark Gray */
+  --color-card-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  
+  --color-popover: 240 10% 5.9%;     /* #141417 - Dark Gray */
+  --color-popover-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  
+  --color-primary-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  --color-secondary-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  --color-accent-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  
+  --color-muted: 240 3.7% 15.9%;     /* #27272A - Muted Gray */
+  --color-muted-foreground: 240 5% 64.9%; /* #A1A1AA - Muted Text */
+  
+  --color-destructive: 0 62.8% 30.6%; /* #7F1D1D - Dark Red */
+  --color-destructive-foreground: 0 0% 98%; /* #FAFAFA - Off White */
+  
+  --color-border: 240 3.7% 15.9%;    /* #27272A - Border Gray */
+  --color-input: 240 3.7% 15.9%;     /* #27272A - Input Gray */
+  --color-ring: 240 4.9% 83.9%;      /* #D4D4D8 - Focus Ring */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(to right, hsl(221, 83%, 53%), hsl(262, 83%, 58%));
+  --gradient-secondary: linear-gradient(to right, hsl(262, 83%, 58%), hsl(142, 71%, 45%));
+  --gradient-accent: linear-gradient(to right, hsl(142, 71%, 45%), hsl(38, 92%, 50%));
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  
+  /* Animation */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark theme (default) */
+.dark-theme {
+  color-scheme: dark;
+  
+  --color-background: 240 10% 3.9%;
+  --color-foreground: 0 0% 98%;
+  
+  --color-card: 240 10% 5.9%;
+  --color-card-foreground: 0 0% 98%;
+  
+  --color-popover: 240 10% 5.9%;
+  --color-popover-foreground: 0 0% 98%;
+  
+  --color-muted: 240 3.7% 15.9%;
+  --color-muted-foreground: 240 5% 64.9%;
+  
+  --color-border: 240 3.7% 15.9%;
+  --color-input: 240 3.7% 15.9%;
+}
+
+/* Light theme (optional) */
+.light-theme {
+  color-scheme: light;
+  
+  --color-background: 0 0% 98%;
+  --color-foreground: 240 10% 3.9%;
+  
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 240 10% 3.9%;
+  
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 240 10% 3.9%;
+  
+  --color-muted: 240 4.9% 93.9%;
+  --color-muted-foreground: 240 3.8% 46.1%;
+  
+  --color-border: 240 5.9% 90%;
+  --color-input: 240 5.9% 90%;
+}
+
+/* Apply base styles */
+body {
+  font-family: var(--font-sans);
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Platform-specific styles */
+.platform-layout {
+  min-height: 100vh;
+  background-color: hsl(var(--color-background));
+}
+
+.platform-sidebar {
+  background-color: hsl(var(--color-card));
+  border-right: 1px solid hsl(var(--color-border));
+}
+
+.platform-header {
+  background-color: hsl(var(--color-card));
+  border-bottom: 1px solid hsl(var(--color-border));
+}
+
+.platform-content {
+  background-color: hsl(var(--color-background));
+}
+
+/* Card styles with proper contrast */
+.card {
+  background-color: hsl(var(--color-card));
+  border: 1px solid hsl(var(--color-border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  background-color: hsl(var(--color-card));
+  border-bottom: 1px solid hsl(var(--color-border));
+}
+
+/* Stats card styles */
+.stats-card {
+  background-color: hsl(var(--color-card));
+  border: 1px solid hsl(var(--color-border));
+  border-radius: var(--radius);
+}
+
+.stats-card-blue {
+  background-color: hsl(221, 83%, 15%);
+  border: 1px solid hsl(221, 83%, 25%);
+}
+
+.stats-card-green {
+  background-color: hsl(142, 71%, 15%);
+  border: 1px solid hsl(142, 71%, 25%);
+}
+
+.stats-card-amber {
+  background-color: hsl(38, 92%, 15%);
+  border: 1px solid hsl(38, 92%, 25%);
+}
+
+.stats-card-purple {
+  background-color: hsl(262, 83%, 15%);
+  border: 1px solid hsl(262, 83%, 25%);
+}
+
+/* Table styles */
+.table {
+  background-color: hsl(var(--color-card));
+  border-radius: var(--radius);
+}
+
+.table-header {
+  background-color: hsl(var(--color-muted));
+}
+
+.table-row:hover {
+  background-color: hsl(var(--color-muted) / 0.5);
+}
+
+/* Ensure text contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(var(--color-foreground));
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p, span, div {
+  color: hsl(var(--color-foreground) / 0.9);
+}
+
+.text-muted-foreground {
+  color: hsl(var(--color-muted-foreground));
+}
+
+/* Badge styles */
+.badge {
+  background-color: hsl(var(--color-muted));
+  color: hsl(var(--color-foreground));
+  border-radius: var(--radius-full);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Button styles */
+.button-primary {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-foreground));
+  border-radius: var(--radius);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.button-primary:hover {
+  background-color: hsl(var(--color-primary-dark));
+}
+
+.button-secondary {
+  background-color: hsl(var(--color-secondary));
+  color: hsl(var(--color-secondary-foreground));
+  border-radius: var(--radius);
+  padding: var(--spacing-2) var(--spacing-4);
+  font-weight: 500;
+  transition: background-color var(--transition-fast);
+}
+
+.button-secondary:hover {
+  background-color: hsl(var(--color-secondary-dark));
+}
+
+/* Input styles */
+.input {
+  background-color: hsl(var(--color-input));
+  border: 1px solid hsl(var(--color-border));
+  border-radius: var(--radius);
+  color: hsl(var(--color-foreground));
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.input:focus {
+  outline: 2px solid hsl(var(--color-ring));
+  outline-offset: 2px;
+}
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Accessibility focus styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--color-ring));
+  outline-offset: 2px;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-foreground));
+  padding: var(--spacing-2) var(--spacing-4);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition-normal) ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  :root {
+    --spacing-4: 0.75rem;
+    --spacing-6: 1rem;
+    --spacing-8: 1.5rem;
+    --spacing-12: 2rem;
+  }
+  
+  .card {
+    padding: var(--spacing-3);
+  }
+  
+  .table {
+    font-size: 0.875rem;
+  }
+}

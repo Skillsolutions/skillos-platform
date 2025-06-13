@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@skillsolutions.io",
+      "role": "admin",
+      "department": "Management",
+      "jobTitle": "Platform Administrator",
+      "image": "/images/avatars/admin-avatar.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Manager User",
+      "email": "manager@skillsolutions.io",
+      "role": "departmentHead",
+      "department": "Engineering",
+      "jobTitle": "Engineering Director",
+      "image": "/images/avatars/manager-avatar.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Team Leader",
+      "email": "team@skillsolutions.io",
+      "role": "teamLeader",
+      "department": "Engineering",
+      "jobTitle": "Frontend Team Lead",
+      "image": "/images/avatars/team-avatar.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Employee User",
+      "email": "employee@skillsolutions.io",
+      "role": "employee",
+      "department": "Engineering",
+      "jobTitle": "Software Developer",
+      "image": "/images/avatars/employee-avatar.jpg"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "topLearners": [
+    {
+      "id": "user1",
+      "name": "Emma Johnson",
+      "email": "emma.johnson@example.com",
+      "department": "Engineering",
+      "jobTitle": "Senior Developer",
+      "image": "/images/avatars/emma-avatar.jpg",
+      "totalTimeSpent": 2550,
+      "coursesCompleted": 8,
+      "lastActive": "2025-05-25T14:30:00Z"
+    },
+    {
+      "id": "user2",
+      "name": "Michael Chen",
+      "email": "michael.chen@example.com",
+      "department": "Product",
+      "jobTitle": "Product Manager",
+      "image": "/images/avatars/michael-avatar.jpg",
+      "totalTimeSpent": 2292,
+      "coursesCompleted": 6,
+      "lastActive": "2025-05-26T09:15:00Z"
+    },
+    {
+      "id": "user3",
+      "name": "Sophia Rodriguez",
+      "email": "sophia.rodriguez@example.com",
+      "department": "Marketing",
+      "jobTitle": "Marketing Specialist",
+      "image": "/images/avatars/sophia-avatar.jpg",
+      "totalTimeSpent": 2142,
+      "coursesCompleted": 7,
+      "lastActive": "2025-05-24T16:45:00Z"
+    },
+    {
+      "id": "user4",
+      "name": "James Wilson",
+      "email": "james.wilson@example.com",
+      "department": "Engineering",
+      "jobTitle": "Data Scientist",
+      "image": "/images/avatars/james-avatar.jpg",
+      "totalTimeSpent": 1986,
+      "coursesCompleted": 5,
+      "lastActive": "2025-05-25T11:20:00Z"
+    },
+    {
+      "id": "user5",
+      "name": "Olivia Kim",
+      "email": "olivia.kim@example.com",
+      "department": "Design",
+      "jobTitle": "UI/UX Designer",
+      "image": "/images/avatars/olivia-avatar.jpg",
+      "totalTimeSpent": 1908,
+      "coursesCompleted": 6,
+      "lastActive": "2025-05-26T13:10:00Z"
+    },
+    {
+      "id": "user6",
+      "name": "Ethan Patel",
+      "email": "ethan.patel@example.com",
+      "department": "Sales",
+      "jobTitle": "Account Executive",
+      "image": "/images/avatars/ethan-avatar.jpg",
+      "totalTimeSpent": 1770,
+      "coursesCompleted": 4,
+      "lastActive": "2025-05-23T15:30:00Z"
+    },
+    {
+      "id": "user7",
+      "name": "Ava Thompson",
+      "email": "ava.thompson@example.com",
+      "department": "HR",
+      "jobTitle": "HR Manager",
+      "image": "/images/avatars/ava-avatar.jpg",
+      "totalTimeSpent": 1632,
+      "coursesCompleted": 5,
+      "lastActive": "2025-05-24T10:45:00Z"
+    },
+    {
+      "id": "user8",
+      "name": "Noah Garcia",
+      "email": "noah.garcia@example.com",
+      "department": "Engineering",
+      "jobTitle": "DevOps Engineer",
+      "image": "/images/avatars/noah-avatar.jpg",
+      "totalTimeSpent": 1554,
+      "coursesCompleted": 4,
+      "lastActive": "2025-05-25T09:30:00Z"
+    },
+    {
+      "id": "user9",
+      "name": "Isabella Lee",
+      "email": "isabella.lee@example.com",
+      "department": "Finance",
+      "jobTitle": "Financial Analyst",
+      "image": "/images/avatars/isabella-avatar.jpg",
+      "totalTimeSpent": 1458,
+      "coursesCompleted": 3,
+      "lastActive": "2025-05-26T14:20:00Z"
+    },
+    {
+      "id": "user10",
+      "name": "William Brown",
+      "email": "william.brown@example.com",
+      "department": "Product",
+      "jobTitle": "Product Owner",
+      "image": "/images/avatars/william-avatar.jpg",
+      "totalTimeSpent": 1362,
+      "coursesCompleted": 4,
+      "lastActive": "2025-05-24T13:15:00Z"
+    }
+  ]
+}
